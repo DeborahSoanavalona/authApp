@@ -2,7 +2,7 @@ import { signup } from '@/app/actions/auth'
  
 export function SignupForm() {
   return (
-    <form action={signup}>
+    <form>
       <div>
         <label htmlFor="name">Name</label>
         <input id="name" name="name" placeholder="Name" />
