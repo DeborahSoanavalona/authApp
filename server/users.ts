@@ -12,13 +12,13 @@ export const signIn = async (email:string, password:string) => {
 
         return{
             succes: true,
-            message: "signed in successfully"
+            message: "Logged in successfully"
         }
     } catch (error) {
         const e = error as Error
         return{
             succes: false,
-            message: { error: e.message || "An unknow error occured" }
+            message: "An unknow error occured"
         }
     }
 }
