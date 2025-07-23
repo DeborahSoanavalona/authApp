@@ -11,8 +11,6 @@ import {
   CardTitle,
 } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
-import { signUp } from "@/server/users"
 import { z } from "zod"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
@@ -136,12 +134,6 @@ export function LoginForm({
                         </FormItem>
                       )}
                     />
-                    <a
-                      href="#"
-                      className="ml-auto text-sm underline-offset-4 hover:underline"
-                    >
-                      Forgot your password?
-                    </a>
                   </div>
                 </div>
                 <Button type="submit" className="w-full" disabled={isLoading}>

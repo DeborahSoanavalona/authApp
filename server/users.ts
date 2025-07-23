@@ -44,3 +44,19 @@ export const signUp = async(email:string, password:string, username:string) => {
         }
     }
 }
+
+
+export const logOut = async() => {
+    try {
+        return{
+            succes: true,
+            message: "Logged out successfully",
+        }
+    } catch (error) {
+        const e = error as Error
+        return{
+            succes: false,
+            message: e.message || "An unknown error occured",
+        }
+    }
+}
