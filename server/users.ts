@@ -9,7 +9,6 @@ export const signIn = async (email:string, password:string) => {
                 password,
             }
         })
-
         return{
             succes: true,
             message: "Logged in successfully"
@@ -18,17 +17,30 @@ export const signIn = async (email:string, password:string) => {
         const e = error as Error
         return{
             succes: false,
-            message: "An unknow error occured"
+            message: e.message || "An unknow error occured"
         }
     }
 }
 
-export const signUp = async() => {
-    await auth.api.signUpEmail({
-        body: {
-            email: "deb@test.com",
-            password: "password123",
-            name: "deb",
+export const signUp = async(email:string, password:string, username:string) => {
+    try {
+        await auth.api.signUpEmail({
+            body: {
+                email,
+                password,
+                name: username,
+            }
+        })
+
+        return{
+            succes: true,
+            message: "Signed up successfully",
         }
-    })
+    } catch (error) {
+        const e = error as Error
+        return{
+            succes: false,
+            message: e.message || "An unknown error occured",
+        }
+    }
 }

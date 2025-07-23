@@ -50,6 +50,9 @@ importers:
       drizzle-orm:
         specifier: ^0.44.3
         version: 0.44.3(@neondatabase/serverless@1.0.1)(@types/pg@8.15.4)(kysely@0.28.2)(pg@8.16.3)(postgres@3.4.7)
+      font:
+        specifier: link:@vercel/turbopack-next/internal/font/google/font
+        version: link:@vercel/turbopack-next/internal/font/google/font
       jsonwebtoken:
         specifier: ^9.0.2
         version: 9.0.2
