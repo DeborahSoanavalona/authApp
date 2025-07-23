@@ -1,3 +1,10 @@
+import LogOut from "@/components/logout"
+
 export default function Dashboard() {
-    return <p>Dashboard</p>;
+    return (
+        <div>
+            <p>Dashboard</p>
+            <LogOut />
+        </div>
+    );
 }
